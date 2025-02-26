@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" c\tent="width=device-width, initial-scale=1.0">
+    <title>Dress Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=MonteCarlo&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_right_alt" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <nav id="Navigation" class="navbar navbar-expand-lg navbar-dark sticky-top bg-body-tertiary navpadd"
+        style="background-color: rgba(0, 0, 0, 0);">
+        <div class="container-fluid " id="NavContainer">
+            <a class="navbar-brand" href="#">
+                <div class="LogoContainer">
+                    <img id="BigLogo" class="Logo" src="./imgs/logoH.png" alt="Dress Table Logo">
+                    <img id="SmallLogo" class="Logo" src="./imgs/logo.png" alt="Dress Table Logo">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" id="NavToggle"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"
+                style="background-color: #d1d7ad; border: none; color: white; border-radius: 50%; height: 3rem; width: 3rem; justify-content: center; align-items: center;"
+                onclick="ChangeNavIcon()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul id="NavContent" class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end
+                    align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">áreas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">personalizar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">sustentabilidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contactos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">pt</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <div class="MainContainer container">
+
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="HeroWrapper">
+                <div class="Hero">
+                    <div class="Hero-info">
+                        <div class="Hero-info-title highlightCor">hotel & restaurant supplies</div>
+                        <div class="Hero-info-big-title  highlightCor">
+                            <p><span>vestimos</span> mesas com
+                                <span class="Gold">
+                                    Elegância
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="HeroDescWrapper">
+                        <div class="HeroDesc highlightCor">
+                            <p>A Dress Table foca-se na produção de produtos para personalizados para promover e elevar
+                                o
+                                seu
+                                <b>RESTAURANTE</b>, <b>HOTEL</b> e serviço de <b>CATERING</b>, com total qualidade e
+                                elegância.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="BannerWrapper">
+
+                        <div id="BannerCrossFade" class="Banner carousel slide carousel-fade" data-bs-ride="carousel"
+                            style="z-index: 0;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active bg-body">
+                                    <img src="./imgs/topVDineTables.jpg" class="d-block SliderImg" alt="...">
+                                </div>
+                                <div class="carousel-item bg-body">
+                                    <img src="./imgs/136_wine-glass-0.webp" class="d-block SliderImg" alt="...">
+                                </div>
+                                <div class="carousel-item bg-body">
+                                    <img src="./imgs/RestaurantHall.webp" class="d-block SliderImg" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row  productSec">
+            <div class="col-md-6 col-xl-12 prodIntro" >
+                <div style="max-width: 20rem;">
+                <p>produtos personalizados</p>
+                <p style="font-size: 2.8rem; line-height: .95;">elevar a sua marca em cada detalhe</p>
+            </div>
+            </div>
+            <div class="col-md-6 col-xl-4 prodContainer " >
+                <div class="prodDetail">
+                    <div class="prodTitle ">
+                        bolsas talheres
+                        e acessórios
+                    </div>
+                    <div class="prodDesc">
+                        artigos descartáveis e acessóríos por medida, em diferentes materiais e modelos totalmente
+                        personalizáveis
+                    </div>
+                </div>
+                <div class="prodImg" style="background-image: url(./imgs/minTableAssort.jpg);">
+
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4  prodContainer " style="margin-top:-5em;">
+                <div class="prodDetail">
+                    <div class="prodTitle ">
+                        caminha de mesa - runners
+                    </div>
+                    <div class="prodDesc">
+                        confeciondas por medida, personalizáveis, em diferentes tipos de materias descartáveis ou em
+                        tecido anti-móda resinado
+                    </div>
+                </div>
+                <div class="prodImg" style="background-image: url(./imgs/caminhademesa.webp);">
+
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4  prodContainer " >
+                <div class="prodDetail">
+                    <div class="prodTitle ">
+                        guardanapos
+                        descartáveis
+                    </div>
+                    <div class="prodDesc">
+                        vasta variedade de modelos, em diferentes tipos de materiais descartáveis, do P&P aos
+                        materiais da gama tecído-náo-tecído
+                    </div>
+                </div>
+                <div class="prodImg" style="background-image: url(./imgs/napkins.webp);">
+
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4  prodContainer ">
+                <div class="prodDetail">
+                    <div class="prodTitle ">
+                        accessórios de mesa e ementas
+                    </div>
+                    <div class="prodDesc">
+                        vasta gama de ementas-menus e acessóríos adicionais de mesa, em diferentes materiais e
+                        modelos, personalizados com a sua marca
+                    </div>
+                </div>
+                <div class="prodImg" style="background-image: url(./imgs/Accessories.webp);">
+
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4 prodContainer d-lg-block d-none" style="margin-top:-5em;">    
+                    <div class="prodDetail">
+                        <div class="prodTitle ">
+                            tolhas de mesa anti-nódoa
+                        </div>
+                        <div class="prodDesc">
+                            com confeçáo própria, produzidas por medida, em tecido anti-nódoa resinado, permitindo uma
+                            limpeza fácil
+                        </div>
+                    </div>
+                    <div class="prodImg" style="background-image: url(./imgs/tablecloth.webp);">
+    
+                    </div>
+                    <div class="btnwrapper">
+                        <div class="btn">
+                            mais produtos
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4 prodContainer " >
+                <div class="prodDetail">
+                    <div class="prodTitle ">
+                        individuais de mesa
+                    </div>
+                    <div class="prodDesc">
+                        soluçóes de individuais de mesa, de fácil limpeza e de grande resistência, para uma
+                        utilização profissional
+                    </div>
+                </div>
+                <div class="prodImg" style="background-image: url(./imgs/individuaismesa.webp);">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row align-items-start SliderWrapper">
+
+            <div class="col-lg-5 d-flex align-items-stretch">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade Slider" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active bg-body">
+                            <img src="./imgs/136_wine-glass-0.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item bg-body">
+                            <img src="./imgs/RestaurantHall.webp" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-5 d-flex align-items-stretch">
+                <div class="SliderDetails">
+                    <p class="SliderTitle">áreas que atuamos</p>
+                    <p class="SliderDesc ">restauração hotelaria catering-eventos horeca</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="Text-Wrapper TextloopContainer">
+            <span class="loopingText">fale connosco .</span>
+            <span class="loopingText">fale connosco .</span>
+            <span class="loopingText">fale connosco .</span>
+            <span class="loopingText">fale connosco .</span>
+            <span class="loopingText">fale connosco .</span>
+            <span class="loopingText">fale connosco .</span>
+            <span class="loopingText">fale connosco .</span>
+            <span class="loopingText">fale connosco .</span>
+        </div>
+        <img class="footerImg" src="./imgs/logo.png" alt="" srcset="">
+        <div class="Text-Wrapper"
+            style="font-size: 1.2rem; margin-top: 2rem; flex-wrap: wrap; gap: .5rem; color: white;">
+            <span>privacidade . </span>
+            <span>cookies . </span>
+            <span>litígios . </span>
+            <span>livro de reclamações</span>
+        </div>
+        <div class="Text-Wrapper"
+            style="font-size: .8rem; margin-top: 0; margin-bottom: 3rem; flex-wrap: wrap; gap: .5rem; color: white;">
+            <span>Dress Table, Lda © os direitos reservados . desenvolvido por Bomsite</span>
+        </div>
+    </div>
+</body>
+
+
+</html>

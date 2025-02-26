@@ -1,0 +1,470 @@
+body {
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #8699a3;
+    overflow-x: hidden;
+}
+
+.navpadd {
+    padding-right: 10rem;
+    padding-left: 10rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.LogoContainer {
+    position: relative;
+    width: 4em;
+    height: 4em;
+}
+
+.Logo {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    left: 0;
+    top: 0;
+}
+
+.activeLogo {
+    opacity: 1;
+}
+
+.navScrolled {
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+.transparentNav {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.nav-link,
+.navbar-nav .nav-link.active {
+    color: #8699a3;
+}
+
+.scrollText {
+    display: none;
+}
+
+.HeroWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.MainContainer {
+    width: 80%;
+    padding: 1em;
+    ;
+}
+
+.Hero {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 45% 55%;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.Hero .BannerWrapper {
+    display: flex;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.Hero .BannerWrapper .Banner {
+    min-height: 78vh;
+    height: 100%;
+    width: 100%;
+    background-image: url("./imgs/topVDineTables.jpg");
+    border-radius: 1em;
+    background-size: cover;
+    background-position: 80% 100%;
+    overflow: hidden;
+    align-self: center;
+    justify-self: center;
+}
+
+.Banner div {
+    height: 100%;
+}
+
+.Hero .Hero-info {
+    display: grid;
+    grid-template-rows: 0.1fr 0.6fr 0.2fr;
+    grid-column: 1 / span 2;
+    width: 70%;
+    grid-row: 1;
+    z-index: 1;
+    pointer-events: none;
+    align-self: center;
+
+}
+
+.Hero .Hero-info .Hero-info-title {
+    display: flex;
+    align-items: end;
+
+}
+
+.Hero .Hero-info .Hero-info-big-title {
+    display: flex;
+    align-items: start;
+    font-size: 6.5rem;
+    line-height: .7;
+
+}
+
+.Hero .Hero-info .Hero-info-big-title span {
+    font-family: "MonteCarlo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10rem;
+    line-height: .7;
+}
+
+.Hero .Hero-info .Hero-info-big-title .Gold {
+    display: flex;
+    align-items: start;
+    transform: translate(0.25em, -0.25em);
+    color: #d1d7ad;
+}
+
+.HeroDescWrapper {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.Hero .HeroDescWrapper .HeroDesc p {
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    width: 55%;
+}
+
+.Hero .Hero-info .infog3 p b {
+    color: #4c5b63;
+}
+
+.highlightCor {
+    color: #8699a3;
+
+}
+
+.prodContainer {
+    margin-top: 3em;
+    position: relative;
+}
+
+.prodIntro :first-child {
+    margin-left: 1em;
+}
+
+.prodContainer .prodDetail {
+    margin: 1em;
+    margin-right: 3em;
+    line-height: 1;
+}
+
+.prodContainer .prodTitle {
+    font-size: 2em;
+    transition: all 0.3s ease;
+}
+
+.prodContainer .prodDesc {
+    font-size: .8rem;
+    margin-top: 1em;
+}
+
+.prodContainer .prodImg {
+    height: 30vw;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    font-style: bold;
+    font-weight: 700;
+}
+
+.prodContainer:hover .prodImg {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.prodContainer .prodImg::after {
+    content: 'arrow_right_alt';
+    width: 3rem;
+    height: 3rem;
+    background-color: #d1d7ad;
+    ;
+    font-family: 'Material Symbols Outlined';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    transform: rotate(-40deg);
+    position: absolute;
+    right: 5%;
+    top: 24%;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.prodContainer:hover .prodImg::after {
+    opacity: 1;
+}
+
+.prodContainer:hover .prodTitle {
+    color: #4c5b63;
+}
+
+.ProdColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: auto;
+
+}
+
+.btnwrapper {
+    padding: 4em;
+}
+
+.btn {
+    border-radius: 1rem;
+    border: 1px solid #8699a3;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+.productSec {
+    padding-top: 10em;
+}
+
+.fullscreenNav {
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+    top: 0;
+    z-index: -1;
+    right: 0;
+
+}
+
+.SliderImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.SliderWrapper {
+    margin-top: 5rem;
+    line-height: 1;
+    z-index: 1;
+    padding-left: 2rem;
+    padding-left: 2rem;
+}
+
+.Slider {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.SliderDetails {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.SliderDesc {
+    font-size: 3.3rem;
+}
+
+.footer {
+    background-color: #8699a3;
+    margin-top: 10rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Text-Wrapper {
+    margin-top: 3rem;
+    font-size: 3rem;
+    color: #d1d7ad;
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.footerImg {
+    height: 7rem;
+    margin-top: 5rem;
+}
+
+.TextloopContainer {
+    display: flex;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.loopingText {
+    animation: TextLoop 10s infinite linear;
+
+
+}
+
+.slick-arrow {
+    color: black;
+    z-index: 2;
+}
+
+@keyframes TextLoop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .Hero {
+        grid-template-columns: 40% 60%;
+    }
+
+    .Hero .BannerWrapper .Banner {
+        min-height: 100%;
+        max-height: 100vh;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .MainContainer {
+        width: 100%;
+    }
+
+    .Hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: 42% 43% 10%;
+    }
+
+    .Hero .Hero-info {
+        grid-column: 1;
+        grid-row: 1;
+        height: 100%;
+    }
+
+    .Hero .BannerWrapper {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .Hero .HeroDescWrapper {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .Hero .BannerWrapper .Banner {
+        min-height: 100%;
+        max-height: 100vh;
+    }
+
+    .Hero .HeroDescWrapper {
+        margin-top: 1rem;
+        padding: 1rem;
+
+    }
+
+    .Hero .HeroDescWrapper .HeroDesc p {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .Hero .Hero-info .Hero-info-big-title {
+        font-size: 5rem;
+        line-height: 1;
+    }
+
+    .Hero .Hero-info .Hero-info-big-title span {
+        font-size: 8rem;
+        line-height: 1;
+    }
+
+    .prodIntro {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0.7rem;
+    }
+
+    .prodContainer {
+        margin-top: 1em;
+    }
+}
+
+@media (max-width: 762px) {
+    .Hero {
+        grid-template-columns: 100%;
+        grid-template-rows: 35% 1fr 20%;
+    }
+
+    .prodContainer .prodImg {
+        height: 50vh;
+    }
+
+    .Hero .BannerWrapper {
+        align-items: center;
+    }
+
+    .Hero .BannerWrapper .Banner {
+        align-items: center;
+    }
+
+    .scrollText {
+        display: inline;
+        writing-mode: sideways-lr;
+        text-orientation: sideways-right;
+        line-height: 0.98;
+
+        margin-right: 1rem;
+    }
+
+    .Hero .Hero-info .Hero-info-big-title {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .Hero .Hero-info .Hero-info-big-title span {
+        font-size: 6rem;
+        line-height: 1;
+    }
+}
