@@ -6,21 +6,44 @@ body {
     overflow-x: hidden;
 }
 
+.forumText {
+    border-radius: 1rem;
+    resize: none;
+}
+
 .ecoFriendlyBanner {
     height: 40vh;
+
     border-radius: 2rem;
-    background-image: url('./imgs/136_wine-glass-0.webp');
+    background-image: url('./imgs/eco.webp');
     background-position: center;
     background-size: cover;
 
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 .ProdPageBanner {
     height: 50vw;
     border-radius: 2rem;
-    background-image: url('./imgs/136_wine-glass-0.webp');
+    background-image: url('./imgs/guardanoposBanner.webp');
     background-position: center;
     background-size: cover;
+}
+
+.prodPageTilteOR p {
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+.prodPageTilteOR p .Gold {
+    font-size: 9rem;
+
 }
 
 .navWrapper {
@@ -35,6 +58,7 @@ body {
 .navpadd {
     width: 90%;
     transition: all 0.3s ease-in-out;
+    background-color: transparent;
 }
 
 .LogoContainer {
@@ -425,10 +449,12 @@ body {
         font-size: 4rem;
         line-height: 0.7;
     }
+
     .prodPageTilteOR p .Gold {
         font-size: 7rem;
         line-height: 0.7;
     }
+
     .ecoFriendly p span {
         font-size: 6rem;
     }
@@ -472,15 +498,27 @@ body {
 
 @media (max-width: 992px) {
 
-    body::before {
-        content: 'scroll';
-        position: fixed;
+    .navpadd {
+        background-color: white;
+    }
+    .prodPageTilteOR p {
+        font-size: 4.5rem;
+        line-height: 1;
+    }
 
-        bottom: 5%;
+    .prodPageTilteOR p .Gold {
+        font-size: 9rem;
+    }
+
+    body::before {
+        content: 'keyboard_arrow_down';
+        position: fixed;
+        font-family: 'Material Symbols Outlined';
+        bottom: 7%; 
         text-orientation: sideways;
         writing-mode: vertical-rl;
         transform: scale(-1);
-        font-size: 2rem;
+        font-size: 1.5rem;
         z-index: 5;
     }
 
@@ -552,12 +590,22 @@ body {
 }
 
 @media (max-width: 762px) {
-    .ProdPageBanner {
-        height: 80vw;
-    } 
+    .prodContainer .prodDetail .prodTitle {
+        font-size: 3.2rem;
+    }
+
+    .prodContainer .prodDetail .prodDesc {
+        font-size: 1.3rem;
+    }
     .ecoFriendlyBanner {
         height: 80vh;
     }
+
+
+    .ProdPageBanner {
+        height: 80vw;
+    }
+
 
     .productSec .prodContainer {
         margin-top: 2rem;
@@ -578,6 +626,7 @@ body {
     .prodContainer .prodImg {
         height: 110vw;
         border-radius: 3rem;
+        margin-top: 3rem;
     }
 
     .Hero .BannerWrapper {
@@ -596,7 +645,7 @@ body {
 
         margin-right: 1rem;
     }
-    
+
     .Hero-info-big-title {
         font-size: 4rem;
         line-height: 1;
@@ -609,9 +658,36 @@ body {
 }
 
 @media (max-width: 576px) {
+    .SliderDetails {
+        padding: 0;
+        margin: 1rem;
+        margin-top: 2rem;
+    }
+    .SliderTitle {
+        font-size: 1.4rem;
+    }
+    .SliderDesc {
+        font-size: 2.7rem;
+    }
+    .prodContainer .prodDetail .prodTitle {
+        font-size: 2.2rem;
+    }
+
+    .prodContainer .prodDetail .prodDesc {
+        font-size: 1.2rem;
+    }
+    .prodPageTilteOR p {
+        font-size: 4rem;
+        line-height: 1;
+    }
+
+    .prodPageTilteOR p .Gold {
+        font-size: 7rem;
+    }
     .ProdPageBanner {
         height: 120vw;
-    } 
+    }
+
     .ecoFriendly p span {
         font-size: 5.5rem;
     }
