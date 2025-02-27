@@ -22,12 +22,13 @@
 </head>
 
 <body>
-    <nav id="Navigation" class="navbar navbar-expand-lg navbar-dark sticky-top bg-body-tertiary navpadd"
+    <center class="navWrapper" >
+    <nav id="Navigation" class="navbar navbar-expand-lg navbar-collapse navbar-dark sticky-top bg-body-tertiary navpadd"
         style="background-color: rgba(0, 0, 0, 0);">
         <div class="container-fluid " id="NavContainer">
             <a class="navbar-brand" href="#">
-                <div class="LogoContainer">
-                    <img id="BigLogo" class="Logo" src="./imgs/logoH.png" alt="Dress Table Logo">
+                <div class="LogoContainer LogoContainerBig">
+                    <img id="BigLogo" class="Logo activeLogo" src="./imgs/logoH.png" alt="Dress Table Logo">
                     <img id="SmallLogo" class="Logo" src="./imgs/logo.png" alt="Dress Table Logo">
                 </div>
             </a>
@@ -65,8 +66,8 @@
             </div>
         </div>
     </nav>
-
-    <div class="MainContainer container">
+</center>
+    <div class="MainContainer container-lg">
 
         <div class="d-flex justify-content-center align-items-center">
             <div class="HeroWrapper">
@@ -112,13 +113,13 @@
             </div>
         </div>
         <div class="row  productSec">
-            <div class="col-md-6 col-xl-12 prodIntro" >
+            <div class="col-12 prodIntro" >
                 <div style="max-width: 20rem;">
                 <p>produtos personalizados</p>
                 <p style="font-size: 2.8rem; line-height: .95;">elevar a sua marca em cada detalhe</p>
             </div>
             </div>
-            <div class="col-md-6 col-xl-4 prodContainer " >
+            <div class="col-md-6 col-xl-4 prodContainer" >
                 <div class="prodDetail">
                     <div class="prodTitle ">
                         bolsas talheres
@@ -133,7 +134,7 @@
 
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4  prodContainer " style="margin-top:-5em;">
+            <div class="col-md-6 col-xl-4  prodContainer " >
                 <div class="prodDetail">
                     <div class="prodTitle ">
                         caminha de mesa - runners
@@ -176,7 +177,7 @@
 
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4 prodContainer d-lg-block d-none" style="margin-top:-5em;">    
+            <div class="col-md-6 col-xl-4 prodContainer " >    
                     <div class="prodDetail">
                         <div class="prodTitle ">
                             tolhas de mesa anti-nódoa
@@ -189,13 +190,12 @@
                     <div class="prodImg" style="background-image: url(./imgs/tablecloth.webp);">
     
                     </div>
-                    <div class="btnwrapper">
+                    <div class="btnwrapper d-xl-block d-none">
                         <div class="btn">
                             mais produtos
                         </div>
                     </div>
             </div>
-
             <div class="col-md-6 col-xl-4 prodContainer " >
                 <div class="prodDetail">
                     <div class="prodTitle ">
@@ -208,6 +208,11 @@
                 </div>
                 <div class="prodImg" style="background-image: url(./imgs/individuaismesa.webp);">
 
+                </div>
+                <div class="btnwrapper d-xl-none d-block">
+                    <div class="btn">
+                        mais produtos
+                    </div>
                 </div>
             </div>
 
