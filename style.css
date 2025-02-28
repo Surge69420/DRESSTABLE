@@ -22,6 +22,7 @@ body {
 }
 .MainContainer {
     padding: 3em;
+    max-width: 1100px;
 }
 p,
 span,
@@ -289,8 +290,8 @@ span,
     font-style: bold;
     font-weight: 700;
 }
-
-.prodImg:hover .prodImg {
+.prodImg:hover {
+    cursor: pointer;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
@@ -578,6 +579,9 @@ span,
 }
 
 @media (max-width: 762px) {
+    .SliderWrapper {
+        margin-top: 0;
+    }
     .forum {
         display: grid;
         grid-template-columns: 1fr;

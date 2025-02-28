@@ -5,6 +5,7 @@
 .prodContainer {
     margin-top: 3em;
     position: relative;
+    padding: 1rem;
 }
 
 .prodIntro :first-child {
@@ -174,7 +175,7 @@
     }
 
     .prodContainer .prodImg {
-        height: 90vw;
+        height: 70vw;
         border-radius: 3rem;
         margin-top: 3rem;
     }
