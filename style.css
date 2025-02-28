@@ -5,12 +5,32 @@ body {
     color: #8699a3;
     overflow-x: hidden;
 }
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
 
+.material-symbols-rounded {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+.MainContainer {
+    padding: 3em;
+}
 p,
 span,
 .prodTitle,
 .prodDesc {
     user-select: none !important;
+}
+.highlightCor {
+    color: #8699a3;
 }
 
 .scrollIndicator {
@@ -22,8 +42,8 @@ span,
     align-items: center;
     font-size: 1.2rem;
     gap: 1rem;
+    cursor: pointer;
 }
-
 .scrollIndicator * {
     line-height: 0;
     padding: 0;
@@ -48,7 +68,10 @@ span,
 .forum div {
     font-size: 0.8rem;
 }
-
+.forumText {
+    border-radius: 1rem;
+    resize: none;
+}
 .EnviarBtn {
     width: 3rem;
     height: 3rem;
@@ -71,26 +94,7 @@ span,
     transform: translateY(-.5rem) scale(1.2);
 }
 
-.forumText {
-    border-radius: 1rem;
-    resize: none;
-}
 
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-}
-
-.material-symbols-rounded {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-}
 
 .ecoFriendlyBanner {
     height: 30vw;
@@ -102,12 +106,21 @@ span,
     backdrop-filter: blur(10px);
 }
 
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
+.ecoFriendly {
+    display: flex;
+    align-items: start;
+    font-size: 3.2rem;
+    line-height: .7;
+    align-items: center;
+
+}
+
+.ecoFriendly span {
+    font-size: 7rem;
+    font-family: "MonteCarlo", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: .7;
 }
 
 .ProdPageBanner {
@@ -127,24 +140,6 @@ span,
     font-size: 9rem;
 
 }
-.scrollIndicator {
-    cursor: pointer;
-}
-
-.navpadd {
-    width: 90%;
-    transition: all 0.3s ease-in-out;
-    background-color: transparent;
-}
-
-
-
-.nav-link,
-.navbar-nav .nav-link.active {
-    color: #8699a3;
-}
-
-
 
 .HeroWrapper {
     display: flex;
@@ -153,9 +148,7 @@ span,
     width: 100%;
 }
 
-.MainContainer {
-    padding: 3em;
-}
+
 
 .Hero {
     display: grid;
@@ -214,39 +207,7 @@ span,
     justify-content: center;
     font-size: 6.7rem;
     line-height: .7;
-
 }
-.form-check-input{
-    cursor: pointer;
-}
-.form-check-input:checked,
-.form-check-input:focus,
-.form-check-input:active {
-    border-color: #d1d7ad !important;
-
-}
-
-.form-check-input:focus {
-    box-shadow: 0 0 5px 2px #d1d7ad !important;
-}
-
-.ecoFriendly {
-    display: flex;
-    align-items: start;
-    font-size: 3.2rem;
-    line-height: .7;
-    align-items: center;
-
-}
-
-.ecoFriendly span {
-    font-size: 7rem;
-    font-family: "MonteCarlo", serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: .7;
-}
-
 .Hero-info-big-title span {
     font-family: "MonteCarlo", serif;
     font-weight: 400;
@@ -280,9 +241,18 @@ span,
     color: #4c5b63;
 }
 
-.highlightCor {
-    color: #8699a3;
+.form-check-input{
+    cursor: pointer;
+}
+.form-check-input:checked,
+.form-check-input:focus,
+.form-check-input:active {
+    border-color: #d1d7ad !important;
 
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 5px 2px #d1d7ad !important;
 }
 
 .prodContainer {
@@ -365,7 +335,9 @@ span,
     margin-top: auto;
 
 }
-
+.productSec {
+    margin-top: 7em;
+}
 .btnwrapper {
     padding: 4em;
 }
@@ -386,9 +358,7 @@ span,
     border: 1px solid #d1d7ad;
 }
 
-.productSec {
-    margin-top: 7em;
-}
+
 
 
 .SliderImg {
@@ -454,14 +424,8 @@ span,
 
 .loopingText {
     animation: TextLoop 10s infinite linear;
-
-
 }
 
-.slick-arrow {
-    color: black;
-    z-index: 2;
-}
 
 @keyframes TextLoop {
     0% {
@@ -499,10 +463,6 @@ span,
         line-height: 0.7;
     }
 
-    .ecoFriendly p span {
-        font-size: 6rem;
-    }
-
     .prodContainer .prodImg {
         height: 50vw;
     }
@@ -511,11 +471,6 @@ span,
     .productSec :nth-child(5),
     .productSec :nth-child(7) {
         margin-top: -8rem;
-    }
-
-    .Hero .BannerWrapper .Banner {
-        min-height: 100%;
-        max-height: 100vh;
     }
 
     .prodContainer .btnwrapper {
@@ -537,22 +492,13 @@ span,
     .prodContainer .prodImg {
         border-radius: 2rem;
     }
+    .ecoFriendly p span {
+        font-size: 6rem;
+    }
 }
 
 
 @media (max-width: 992px) {
-    .Hero .Hero-info .Hero-info-title {
-        transform: translateY(4rem);
-    }
-
-    .ecoFriendlyBanner {
-        height: 40vw;
-    }
-
-    .navpadd {
-        background-color: white;
-    }
-
     .prodPageTilte p {
         font-size: 4.5rem;
         line-height: 1;
@@ -561,24 +507,27 @@ span,
     .prodPageTilte p .Gold {
         font-size: 9rem;
     }
-
-    .scrollIndicator {
+    .prodIntro {
         display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0.7rem;
     }
 
-    .navWrapper {
-        height: 8rem;
+    .prodContainer {
+        margin-top: 1em;
     }
 
     .productSec {
         margin-top: 0rem;
     }
-
+    .Hero .Hero-info .Hero-info-title {
+        transform: translateY(4rem);
+    }
     .Hero {
         grid-template-columns: 1fr;
         grid-template-rows: 35% 52% 10%;
     }
-
     .Hero .Hero-info {
         grid-column: 1;
         grid-row: 1;
@@ -620,16 +569,11 @@ span,
         font-size: 12rem;
         line-height: 1;
     }
-
-    .prodIntro {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0.7rem;
+    .ecoFriendlyBanner {
+        height: 40vw;
     }
-
-    .prodContainer {
-        margin-top: 1em;
+    .scrollIndicator {
+        display: flex;
     }
 }
 
@@ -646,10 +590,6 @@ span,
         grid-column: span 2 !important;
     }
 
-    .Hero .Hero-info .Hero-info-title {
-        transform: translateY(2rem);
-    }
-
     .prodContainer .prodDetail .prodTitle {
         font-size: 3.2rem;
     }
@@ -657,11 +597,6 @@ span,
     .prodContainer .prodDetail .prodDesc {
         font-size: 1.3rem;
     }
-
-    .ecoFriendlyBanner {
-        height: 110vw;
-    }
-
 
     .ProdPageBanner {
         height: 80vw;
@@ -689,22 +624,15 @@ span,
         border-radius: 3rem;
         margin-top: 3rem;
     }
-
+    .Hero .Hero-info .Hero-info-title {
+        transform: translateY(2rem);
+    }
     .Hero .BannerWrapper {
         align-items: center;
     }
 
     .Hero .BannerWrapper .Banner {
         align-items: center;
-    }
-
-    .scrollText {
-        display: inline;
-        writing-mode: sideways-lr;
-        text-orientation: sideways-right;
-        line-height: 0.98;
-
-        margin-right: 1rem;
     }
 
     .Hero-info-big-title {
@@ -716,6 +644,10 @@ span,
         font-size: 7rem;
         line-height: 1;
     }
+
+    .ecoFriendlyBanner {
+        height: 110vw;
+    }
 }
 
 @media (max-width: 576px) {
@@ -725,10 +657,6 @@ span,
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.6fr;
         gap: 0.7em;
         width: 100%;
-    }
-
-    .ecoFriendlyBanner {
-        height: 130vw;
     }
 
     .SliderDetails {
@@ -766,10 +694,6 @@ span,
         height: 120vw;
     }
 
-    .ecoFriendly p span {
-        font-size: 5.2rem;
-    }
-
     .productSec .prodContainer {
         margin-top: 2rem;
 
@@ -790,5 +714,11 @@ span,
     .prodContainer .prodImg {
         height: 110vw;
         border-radius: 3rem;
+    }
+    .ecoFriendly p span {
+        font-size: 5.2rem;
+    }
+    .ecoFriendlyBanner {
+        height: 130vw;
     }
 }

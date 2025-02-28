@@ -10,6 +10,13 @@ nav {
     transition: all 0.3s ease-in-out;
 
 }
+
+.nav-link,
+.navbar-nav .nav-link.active {
+    color: #8699a3;
+}
+
+
 .active {
     color: black !important;
 }
