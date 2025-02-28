@@ -118,12 +118,12 @@ span,
     background-size: cover;
 }
 
-.prodPageTilteOR p {
+.prodPageTilte p {
     font-size: 4.5rem;
     line-height: 1;
 }
 
-.prodPageTilteOR p .Gold {
+.prodPageTilte p .Gold {
     font-size: 9rem;
 
 }
@@ -216,7 +216,9 @@ span,
     line-height: .7;
 
 }
-
+.form-check-input{
+    cursor: pointer;
+}
 .form-check-input:checked,
 .form-check-input:focus,
 .form-check-input:active {
@@ -380,10 +382,8 @@ span,
 
 .btn:hover,
 .btn:active {
-
-    background-color: #d1d7ad;
-    color: white;
-    border: 1px solid #8699a3;
+    color: #8699a3;
+    border: 1px solid #d1d7ad;
 }
 
 .productSec {
@@ -489,12 +489,12 @@ span,
 }
 
 @media (max-width: 1200px) {
-    .prodPageTilteOR p {
+    .prodPageTilte p {
         font-size: 4rem;
         line-height: 0.7;
     }
 
-    .prodPageTilteOR p .Gold {
+    .prodPageTilte p .Gold {
         font-size: 7rem;
         line-height: 0.7;
     }
@@ -553,12 +553,12 @@ span,
         background-color: white;
     }
 
-    .prodPageTilteOR p {
+    .prodPageTilte p {
         font-size: 4.5rem;
         line-height: 1;
     }
 
-    .prodPageTilteOR p .Gold {
+    .prodPageTilte p .Gold {
         font-size: 9rem;
     }
 
@@ -753,12 +753,12 @@ span,
         font-size: 1.2rem;
     }
 
-    .prodPageTilteOR p {
+    .prodPageTilte p {
         font-size: 4rem;
         line-height: 1;
     }
 
-    .prodPageTilteOR p .Gold {
+    .prodPageTilte p .Gold {
         font-size: 7rem;
     }
 
@@ -767,7 +767,7 @@ span,
     }
 
     .ecoFriendly p span {
-        font-size: 5.5rem;
+        font-size: 5.2rem;
     }
 
     .productSec .prodContainer {
