@@ -1,0 +1,141 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    position: fixed;
+    width: 90%;
+    background-color: transparent;
+    height: 4.3rem;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+
+}
+.active {
+    color: black !important;
+}
+.LogoContainer {
+    position: relative;
+    width: 4em;
+    height: 4em;
+    transition: all 0.3s ease-in-out;
+}
+
+.LogoContainerBig {
+    width: 6em;
+}
+
+.Logo {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    left: 0;
+    top: 0;
+}
+
+.activeNavToggle {
+    display: flex;
+}
+
+.activeLogo {
+    opacity: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
+nav ul li a {
+
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+.InVisible {
+    opacity: 0;
+}
+.scrolled {
+    overflow: hidden;
+    width: 100%;
+}
+
+nav button {
+    display: none;
+    ;
+}
+
+.scrolled button {
+    display: block;
+}
+.navbar-toggler {
+    transition: all 0.3s ease-in-out;
+}
+.navbar-toggler:hover {
+    transform: scale(1.2);
+    z-index: 3;
+}
+.scrolled {
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled ul {
+    align-items: start;
+    height: auto;
+    position: absolute;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    right: -3;
+    width: calc(100vw - 4rem);
+    top: 4rem;
+}
+.scrolled ul li a {
+    font-size: 1.1rem !important;
+}
+nav ul li a:hover {
+    color: black !important;
+}
+@media (max-width: 992px) {
+    nav button {
+        display: block;
+    }
+
+    nav {
+        z-index: 10;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+        width: 100%;
+        height: 5rem;
+    }
+
+    nav ul {
+        align-items: start;
+        height: auto;
+        position: absolute;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+        right: -3;
+        width: calc(100vw - 4rem);
+        top: 4rem;
+    }
+    nav ul li a {
+        font-size: 1.1rem !important;
+    }
+}
+@media (max-width: 762px) {
+    nav {
+        background-color: white;
+
+            
+    }
+}

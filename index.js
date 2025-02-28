@@ -1,49 +1,56 @@
+scrollFunc(document.querySelector("nav"));
 function ChangeNavIcon() {
+    document.body.style.overflow = "none";
+    let content = document.querySelector("nav");
     let navToggle = document.getElementById('NavToggle');
-    let navBar = document.getElementById("Navigation");
-    let navContent = document.getElementById("NavContent");
-    navToggle.innerHTML = navToggle.innerHTML === 'X' ? '<span class="navbar-toggler-icon"></span>' : 'X';
-    if (navBar.classList.contains("transparentNav")) {
-        navBar.classList.remove("transparentNav");
-    }
-    else {
-        navBar.classList.add("transparentNav");
-    }
-    if (navContent.classList.contains("fullscreenNav")) {
-        navContent.classList.remove("fullscreenNav");
-        navContent.style.height = "auto";
+    navToggle.innerHTML = navToggle.innerHTML === 'menu' ? 'close' : 'menu';
+    scrollFunc(content);
+    if (content.style.height !== "100vh") {
+        document.body.style.overflow = "hidden";
+        content.style.height = "100vh";
+        content.style.background = "white";
+        var elems = document.querySelectorAll(".nav-link");
+        var index = 0, length = elems.length;
+        for (; index < length; index++) {
+            elems[index].classList.remove("InVisible");
+        }
     } else {
-        navContent.classList.add("fullscreenNav")
-        navContent.style.height = "100vh";
-    }
-
-}
-window.onscroll = function () {
-
-    let navBar = document.getElementById("Navigation");
-    let navToggle = document.getElementById('NavToggle');
-    let navContent = document.getElementById("NavContent");
-    if (!navContent.parentNode.classList.contains("show") && !navContent.parentNode.classList.contains("collapsing")) {
-        if (window.scrollY > 50) {
-            if (navBar.classList.contains("navbar-expand-lg")) {
-                navBar.classList.remove("navbar-expand-lg")
-                navBar.classList.add("navScrolled")
-                navBar.classList.add("transparentNav")
-                document.getElementById("SmallLogo").classList.add("activeLogo");
-                document.getElementById("SmallLogo").parentNode.classList.remove("LogoContainerBig");
-                document.getElementById("BigLogo").classList.remove("activeLogo");
-            }
-
-            navToggle.classList.add("activeNavToggle");
-        } else {
-            if (!navBar.classList.contains("navbar-expand-lg")) {
-                navBar.classList.add("navbar-expand-lg")
-                navBar.classList.remove("navScrolled")
-                document.getElementById("BigLogo").classList.add("activeLogo");
-                document.getElementById("SmallLogo").parentNode.classList.add("LogoContainerBig");
-                document.getElementById("SmallLogo").classList.remove("activeLogo");
-            }
-            navToggle.classList.remove("activeNavToggle");
+        document.body.style.overflow = "";
+        content.style.height = "";
+        content.style.background = "";
+        var elems = document.querySelectorAll(".nav-link");
+        var index = 0, length = elems.length;
+        for (; index < length; index++) {
+            elems[index].classList.add("InVisible");
         }
     }
-};
+}
+window.onscroll = function () {
+    let content = document.querySelector("nav");
+    if (content.style.height !== "100vh") {
+        scrollFunc(content);
+    }
+}
+function scrollFunc(content) {
+    if (window.scrollY > 50) {
+        var elems = document.querySelectorAll(".nav-link");
+        var index = 0, length = elems.length;
+        for (; index < length; index++) {
+            elems[index].classList.add("InVisible");
+        }
+        document.getElementById("SmallLogo").classList.add("activeLogo");
+        document.getElementById("SmallLogo").parentNode.classList.remove("LogoContainerBig");
+        document.getElementById("BigLogo").classList.remove("activeLogo");
+        content.classList.add("scrolled");
+    } else {
+        var elems = document.querySelectorAll(".nav-link");
+        var index = 0, length = elems.length;
+        for (; index < length; index++) {
+            elems[index].classList.remove("InVisible");
+        }
+        document.getElementById("BigLogo").classList.add("activeLogo");
+        document.getElementById("SmallLogo").parentNode.classList.add("LogoContainerBig");
+        document.getElementById("SmallLogo").classList.remove("activeLogo");
+        content.classList.remove("scrolled");
+    }
+}

@@ -16,56 +16,55 @@
         href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=MonteCarlo&family=Sora:wght@100..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_right_alt" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_right_alt,keyboard_double_arrow_down" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close,menu" />
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js"></script>
+    <link rel="stylesheet" href="nav.css">
 </head>
 
 <body>
-    <center class="navWrapper" >
-    <nav id="Navigation" class="navbar navbar-expand-lg navbar-collapse navbar-dark sticky-top bg-body-tertiary navpadd">
-        <div class="container-fluid " id="NavContainer">
-            <a class="navbar-brand" href="#">
+    <div class="d-flex justify-content-center mb-5">
+        <nav id="Navigation">
+            <a class="navbar-brand" href="#" style="display: flex; align-items: center; height: 3rem;">
                 <div class="LogoContainer LogoContainerBig">
                     <img id="BigLogo" class="Logo activeLogo" src="./imgs/logoH.png" alt="Dress Table Logo">
                     <img id="SmallLogo" class="Logo" src="./imgs/logo.png" alt="Dress Table Logo">
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" id="NavToggle"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"
+            <ul id="NC">
+                <li class="nav-item mt-lg-0 mt-3">
+                    <a class="nav-link active" aria-current="page" href="#">sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">áreas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Products.html">produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">personalizar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">sustentabilidade</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">contactos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">pt</a>
+                </li>
+            </ul>
+            <button class=" navbar-toggler" type="button" aria-label="Toggle navigation"
                 style="background-color: #d1d7ad; border: none; color: white; border-radius: 50%; height: 3rem; width: 3rem; justify-content: center; align-items: center;"
                 onclick="ChangeNavIcon()">
-                <span class="navbar-toggler-icon"></span>
+                <span id="NavToggle" class="material-symbols-rounded d-flex justify-content-center align-items-center">menu</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul id="NavContent" class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end
-                    align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">áreas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">personalizar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">sustentabilidade</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">contactos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">pt</a>
-                    </li>
-            </div>
-        </div>
-    </nav>
-</center>
+        </nav>
+    </div>
+
+    
     <div class="MainContainer container-lg">
 
         <div class="d-flex justify-content-center align-items-center">
@@ -95,7 +94,7 @@
 
                         <div id="BannerCrossFade" class="Banner carousel slide carousel-fade" data-bs-ride="carousel"
                             style="z-index: 0;">
-                            <div class="carousel-inner">
+                            <div class="carousel-inner h-100">
                                 <div class="carousel-item active bg-body">
                                     <img src="./imgs/topVDineTables.jpg" class="d-block SliderImg" alt="...">
                                 </div>
@@ -112,13 +111,13 @@
             </div>
         </div>
         <div class="row  productSec">
-            <div class="col-12 prodIntro" >
+            <div class="col-12 prodIntro">
                 <div style="max-width: 20rem;">
-                <p>produtos personalizados</p>
-                <p style="font-size: 2.8rem; line-height: .95;">elevar a sua marca em cada detalhe</p>
+                    <p>produtos personalizados</p>
+                    <p style="font-size: 2.8rem; line-height: .95;">elevar a sua marca em cada detalhe</p>
+                </div>
             </div>
-            </div>
-            <div class="col-md-6 col-xl-4 prodContainer" >
+            <div class="col-md-6 col-xl-4 prodContainer">
                 <div class="prodDetail">
                     <div class="prodTitle ">
                         bolsas talheres
@@ -133,7 +132,7 @@
 
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4  prodContainer " >
+            <div class="col-md-6 col-xl-4  prodContainer ">
                 <div class="prodDetail">
                     <div class="prodTitle ">
                         caminha de mesa - runners
@@ -147,7 +146,7 @@
 
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4  prodContainer " >
+            <div class="col-md-6 col-xl-4  prodContainer " onclick="window.location.href='./Products.html'">
                 <div class="prodDetail">
                     <div class="prodTitle ">
                         guardanapos
@@ -176,26 +175,26 @@
 
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4 prodContainer " >    
-                    <div class="prodDetail">
-                        <div class="prodTitle ">
-                            tolhas de mesa anti-nódoa
-                        </div>
-                        <div class="prodDesc">
-                            com confeçáo própria, produzidas por medida, em tecido anti-nódoa resinado, permitindo uma
-                            limpeza fácil
-                        </div>
+            <div class="col-md-6 col-xl-4 prodContainer ">
+                <div class="prodDetail">
+                    <div class="prodTitle ">
+                        tolhas de mesa anti-nódoa
                     </div>
-                    <div class="prodImg" style="background-image: url(./imgs/tablecloth.webp);">
-    
+                    <div class="prodDesc">
+                        com confeçáo própria, produzidas por medida, em tecido anti-nódoa resinado, permitindo uma
+                        limpeza fácil
                     </div>
-                    <div class="btnwrapper d-xl-block d-none">
-                        <div class="btn">
-                            mais produtos
-                        </div>
+                </div>
+                <div class="prodImg" style="background-image: url(./imgs/tablecloth.webp);">
+
+                </div>
+                <div class="btnwrapper d-xl-block d-none">
+                    <div class="btn">
+                        mais produtos
                     </div>
+                </div>
             </div>
-            <div class="col-md-6 col-xl-4 prodContainer " >
+            <div class="col-md-6 col-xl-4 prodContainer ">
                 <div class="prodDetail">
                     <div class="prodTitle ">
                         individuais de mesa
@@ -241,7 +240,7 @@
                     </button>
                 </div>
             </div>
-            <div class="col-lg-6 d-flex align-items-stretch">
+            <div class="col-lg-6 d-flex align-items-stretch align-self-end">
                 <div class="SliderDetails">
                     <p class="SliderTitle">áreas que atuamos</p>
                     <p class="SliderDesc ">restauração hotelaria catering-eventos horeca</p>
