@@ -13,6 +13,30 @@ span,
     user-select: none !important;
 }
 
+.scrollIndicator {
+    position: fixed;
+    bottom: 3rem;
+    left: 0.5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+
+.scrollIndicator * {
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.scrollIndicator p {
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    position: relative;
+    left: -0.05rem;
+}
+
 .forum {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -20,9 +44,11 @@ span,
     gap: 0.7em;
     width: 100%;
 }
+
 .forum div {
     font-size: 0.8rem;
 }
+
 .EnviarBtn {
     width: 3rem;
     height: 3rem;
@@ -45,7 +71,10 @@ span,
     transform: translateY(-.5rem) scale(1.2);
 }
 
-
+.forumText {
+    border-radius: 1rem;
+    resize: none;
+}
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -305,7 +334,7 @@ span,
     font-weight: 700;
 }
 
-.prodContainer:hover .prodImg {
+.prodImg:hover .prodImg {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
@@ -335,11 +364,11 @@ span,
     opacity: 0;
 }
 
-.prodContainer:hover .prodImg::after {
+.prodImg:hover .prodImg::after {
     opacity: 1;
 }
 
-.prodContainer:hover .prodTitle {
+.prodImg:hover .prodTitle {
     color: #4c5b63;
 }
 
@@ -363,6 +392,14 @@ span,
     justify-items: center;
     padding: 1rem;
     font-size: 0.8rem;
+}
+
+.btn:hover,
+.btn:active {
+
+    background-color: #d1d7ad;
+    color: white;
+    border: 1px solid #8699a3;
 }
 
 .productSec {
@@ -541,28 +578,8 @@ span,
         font-size: 9rem;
     }
 
-    body::before {
-        content: 'keyboard_double_arrow_down';
-        position: fixed;
-        font-family: 'Material Symbols Outlined';
-        bottom: 3rem;
-        left: .3rem;
-        transform: scale(1);
-        font-size: 2rem;
-        z-index: 5;
-    }
-
-    body::after {
-        content: 'scroll';
-        position: fixed;
-        font-family: 'Sora';
-        bottom: 6rem;
-        left: .53rem;
-        text-orientation: sideways;
-        writing-mode: vertical-rl;
-        transform: scale(-1);
-        font-size: 1rem;
-        z-index: 5;
+    .scrollIndicator {
+        display: flex;
     }
 
     .navWrapper {
@@ -635,11 +652,16 @@ span,
 @media (max-width: 762px) {
     .forum {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.1fr 0.1fr 0.1fr 2.5fr 1.6fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.6fr;
         gap: 0.7em;
         width: 100%;
     }
+
+    .forum div {
+        grid-column: span 2 !important;
+    }
+
     .Hero .Hero-info .Hero-info-title {
         transform: translateY(2rem);
     }
@@ -715,11 +737,12 @@ span,
 @media (max-width: 576px) {
     .forum {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.1fr 0.1fr 0.1fr 2.5fr 1.6fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.6fr;
         gap: 0.7em;
         width: 100%;
     }
+
     .ecoFriendlyBanner {
         height: 130vw;
     }
