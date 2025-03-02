@@ -36,12 +36,12 @@ function scrollFunc(content) {
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrollPercent = (scrollTop / scrollHeight) * 100;
 
-    if (scrollPercent > 90) {
+    if (scrollPercent >= 80) {
         scrollIndic = document.querySelector(".scrollIndicator");
         arrow = document.querySelector("#arrow");
         arrow.style.transform = "scale(-1)"
         scrollIndic.style.flexDirection = "column-reverse"
-        scrollIndic.style.color = "white";
+        scrollIndic.style.color = "#d1d7ad";
     } else {
         scrollIndic = document.querySelector(".scrollIndicator");
         arrow = document.querySelector("#arrow");
