@@ -3,7 +3,7 @@ nav {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     height: 4.3rem;
     margin: 0;
