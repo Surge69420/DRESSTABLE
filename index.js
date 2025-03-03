@@ -36,18 +36,23 @@ function scrollFunc(content) {
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrollPercent = (scrollTop / scrollHeight) * 100;
 
-    if (scrollPercent >= 80) {
+    if (scrollPercent >= 85) {
         scrollIndic = document.querySelector(".scrollIndicator");
+        gobackIndc = document.querySelector(".GoBackIndicator");
         arrow = document.querySelector("#arrow");
         arrow.style.transform = "scale(-1)"
         scrollIndic.style.flexDirection = "column-reverse"
-        scrollIndic.style.color = "#d1d7ad";
+        scrollIndic.style.color = "white";
+        if(gobackIndc) {gobackIndc.style.color = "white";}
+        
     } else {
         scrollIndic = document.querySelector(".scrollIndicator");
+        gobackIndc = document.querySelector(".GoBackIndicator");
         arrow = document.querySelector("#arrow");
         arrow.style.transform = "scale(1)"
         scrollIndic.style.flexDirection = ""
         scrollIndic.style.color = "";
+        if(gobackIndc) {gobackIndc.style.color = "";}
     }
     if (window.scrollY > 50) {
         var elems = document.querySelectorAll(".nav-link");
@@ -87,3 +92,15 @@ function Scroll()
         scrollTopDummy.scrollIntoView({ behavior: "smooth", block: "end" });
     }
 }
+
+document.addEventListener("DOMContentLoaded", function (){
+    const elements = document.querySelectorAll(".fade-in-up");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(function (entry) {
+            if(entry.isIntersecting){
+                entry.target.classList.add("fade-in-active");
+            }
+        })
+    }, {threshold: 0.2});
+    elements.forEach((el) => observer.observe(el))
+})

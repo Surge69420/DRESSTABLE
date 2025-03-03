@@ -11,7 +11,9 @@ nav {
     background-color: transparent;
     transition: all 0.3s ease-in-out;
 }
-
+#NavToggle {
+    font-size: 1.5rem;
+}
 nav ul {
     display: flex;
     height: 100%;
@@ -26,7 +28,8 @@ nav ul li a {
     transition: all 0.4s ease-in-out;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:active {
     color: black !important;
 }
 
@@ -37,8 +40,8 @@ nav button {
 /* Logo Styles */
 .LogoContainer {
     position: relative;
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
     transition: all 0.3s ease-in-out;
 }
 
@@ -62,7 +65,7 @@ nav button {
 }
 
 /* Navigation Link Styles */
-.nav-link, 
+.nav-link,
 .navbar-nav .nav-link.active {
     color: #8699a3;
 }
@@ -73,10 +76,19 @@ nav button {
 
 /* Toggle Button Styles */
 .navbar-toggler {
+    background-color: #d1d7ad;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    justify-content: center;
+    align-items: center;
     transition: all 0.3s ease-in-out;
 }
 
-.navbar-toggler:hover {
+.navbar-toggler:hover,
+.navbar-toggler:active {
     transform: scale(1.2);
     z-index: 3;
 }
@@ -128,9 +140,53 @@ nav button {
         max-width: 1800px;
     }
 }
-
+@media (max-width: 992px) AND (min-width: 762px) {
+    .LogoContainer {
+        width: 2em;
+        height: 2em;
+    }
+    
+    .LogoContainerBig {
+        width: 7em;
+        height: 7em;
+    }
+    .scrolled .navbar-toggler {
+        height: 2.1rem;
+        width: 2.1rem;
+        margin-top: 0.31rem;
+    }
+    .scrolled .navbar-toggler #NavToggle {
+        font-size: 1rem;
+    }
+    .scrolled {
+        padding: 0.3rem;
+    }
+}
+@media (max-width: 1200px) AND (min-width: 992px) {
+    .LogoContainer {
+        width: 3em;
+        height: 3em;
+    }
+    
+    .LogoContainerBig {
+        width: 7em;
+        height: 7em;
+    }
+    .scrolled .navbar-toggler {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-top: 0.31rem;
+    }
+    .scrolled .navbar-toggler #NavToggle {
+        font-size: 1rem;
+    }
+    .scrolled {
+        padding: 0.4rem;
+    }
+}
 /* Tablet Screens */
 @media (max-width: 992px) {
+
     nav {
         z-index: 10;
         width: 100%;
@@ -138,11 +194,11 @@ nav button {
         overflow: hidden;
         transition: all 0.3s ease-in-out;
     }
-    
+
     nav button {
         display: block;
     }
-    
+
     nav ul {
         position: absolute;
         top: 4rem;
@@ -153,7 +209,7 @@ nav button {
         justify-content: center;
         align-items: center;
     }
-    
+
     nav ul li a {
         font-size: 1.1rem !important;
     }
