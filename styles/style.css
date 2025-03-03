@@ -357,6 +357,7 @@ span,
 .prodIntro :first-child {
     margin-left: 1em;
     max-width: 20rem;
+    font-family: "Sora", sans-serif;
 }
 
 .prodContainer div .prodDetail {
@@ -444,7 +445,7 @@ span,
 }
 
 .SliderWrapper {
-    margin-top: 1rem;
+    margin-top: 3rem;
     line-height: 1;
     z-index: 1;
 }
@@ -468,7 +469,7 @@ span,
 /* Footer Styles */
 .footer {
     background-color: #8699a3;
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: white;
     display: flex;
     flex-direction: column;
@@ -575,7 +576,7 @@ span,
     /* Product Section Spacing */
     .productSec :nth-child(3),
     .productSec :nth-child(6) {
-        margin-top: -5rem;
+        margin-top: -7rem;
     }
 
     .prodContainer .btnwrapper {
@@ -626,7 +627,9 @@ span,
     .productSec :nth-child(7) {
         margin-top: -8rem;
     }
-
+    .SliderWrapper {
+        margin-top: 0;
+    }
     /* Eco Friendly Section */
     .ecoFriendly p span {
         font-size: 6rem;
